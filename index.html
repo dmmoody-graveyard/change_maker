@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="js/jquery-1.11.2.js"></script>
+    <script src="js/scripts.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <title>Change Maker</title>
+  </head>
+  <body>
+    <div class='container'>
+      <h1>Change Maker</h1>
+
+      <form id="form">
+        <div class="form-group">
+          <label class="lead" for='amount'>Enter the amount of money you would like to make change for:</label>
+          <input class='input' id="amount" type="text">
+        </div>
+        <div class="form-group">
+          <label class="lead" for="start">Do you desire change with a lower denomination?</label>
+          <input type="radio" name="start" value="no" checked="checked">No
+          <input type="radio" name="start" value="yes">Yes
+          <select id="start" name="start">
+            <option value="quarter">Quarters</option>
+            <option value="dime">Dimes</option>
+            <option value="nickel">Nickels</option>
+            <option value="penny">Pennies</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <button type="button" class="btn btn-default">Get My Change</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
