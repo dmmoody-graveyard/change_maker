@@ -10,15 +10,17 @@
     <div class='container'>
       <h1>Change Maker</h1>
 
-      <form id="form">
+      <form id="change">
         <div class="form-group">
           <label class="lead" for='amount'>Enter the amount of money you would like to make change for:</label>
-          <input class='input' id="amount" type="text">
+          <input id="amount" type="text">
         </div>
         <div class="form-group">
-          <label class="lead" for="start">Do you desire change with a lower denomination?</label>
-          <input type="radio" name="start" value="no" checked="checked">No
-          <input type="radio" name="start" value="yes">Yes
+          <label class="lead" for="desire">Do you desire change with a lower denomination?</label>
+          <input type="radio" name="desire" value="no" checked="checked">No
+          <input type="radio" name="desire" value="yes">Yes
+        </div>
+        <div class="form-group">
           <select id="start" name="start">
             <option value="quarter">Quarters</option>
             <option value="dime">Dimes</option>
@@ -27,9 +29,18 @@
           </select>
         </div>
         <div class="form-group">
-          <button type="button" class="btn btn-default">Get My Change</button>
+          <button type="submit" class="btn btn-default">Get My Change</button>
         </div>
       </form>
+
+      <div id="">
+        <h3>Your change</h3>
+        <p class="lead">You will receive:<br>
+          <span id="quarter"></span> quarter(s)<br>
+          <span id="dime"></span> dime(s)<br>
+          <span id="nickel"></span> nickels<br>
+          <span id='penny'></span> penny(ies)</p>
+      </div>
     </div>
   </body>
 </html>
