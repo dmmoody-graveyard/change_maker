@@ -30,6 +30,16 @@ $(document).ready(function() {
     $('#dime').text(dime);
     $('#nickel').text(nickel);
     $('#penny').text(penny);
+
+    $('#result').show();
     event.preventDefault();
   });
-})
+
+  $('input[type="radio"]').click(function() {
+    if ($(this).attr('value') == 'yes') {
+      $('#start').show();
+    } else {
+      $('#start').hide();
+    }
+  });
+});
