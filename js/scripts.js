@@ -21,17 +21,17 @@ $(document).ready(function() {
     var amount = parseFloat($('input#amount').val());
     var start = $('select#start').val();
     var result = coins(amount,start);
-    var quarter = result['quarter'];
-    var dime = result['dime'];
-    var nickel = result['nickel'];
-    var penny = result['penny'];
 
-    $('#quarter').text(quarter);
-    $('#dime').text(dime);
-    $('#nickel').text(nickel);
-    $('#penny').text(penny);
+    for (var key in result) {
+      if (result[key] !== 0) {
+        $('#' + key).text(result[key] + " " + key).show();
+      } else {
+        $('#' + key).hide();
+      }
+    }
 
-    $('#result').show();
+    $('#money').text(amount);
+    $('#results').show();
     event.preventDefault();
   });
 
